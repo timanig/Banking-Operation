@@ -30,14 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtdate = new System.Windows.Forms.DateTimePicker();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtphone = new System.Windows.Forms.TextBox();
+            this.txtstate = new System.Windows.Forms.TextBox();
+            this.txtcity = new System.Windows.Forms.TextBox();
+            this.txtstreet = new System.Windows.Forms.TextBox();
+            this.txtfname = new System.Windows.Forms.TextBox();
+            this.txtlname = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,21 +49,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtacctype = new System.Windows.Forms.ComboBox();
+            this.txtbal = new System.Windows.Forms.TextBox();
+            this.txtdes = new System.Windows.Forms.TextBox();
+            this.txtacc = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -82,14 +82,14 @@
             // 
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtdate);
+            this.tabPage1.Controls.Add(this.txtemail);
+            this.tabPage1.Controls.Add(this.txtphone);
+            this.tabPage1.Controls.Add(this.txtstate);
+            this.tabPage1.Controls.Add(this.txtcity);
+            this.tabPage1.Controls.Add(this.txtstreet);
+            this.tabPage1.Controls.Add(this.txtfname);
+            this.tabPage1.Controls.Add(this.txtlname);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
@@ -106,61 +106,82 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // label14
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(160, 274);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(249, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label14.Location = new System.Drawing.Point(174, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 24);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "cust #";
             // 
-            // textBox8
+            // label13
             // 
-            this.textBox8.Location = new System.Drawing.Point(160, 317);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(249, 20);
-            this.textBox8.TabIndex = 15;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(78, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(84, 16);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Customer ID:";
             // 
-            // textBox6
+            // txtdate
             // 
-            this.textBox6.Location = new System.Drawing.Point(160, 242);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(249, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtdate.Location = new System.Drawing.Point(160, 274);
+            this.txtdate.Name = "txtdate";
+            this.txtdate.Size = new System.Drawing.Size(249, 20);
+            this.txtdate.TabIndex = 16;
             // 
-            // textBox5
+            // txtemail
             // 
-            this.textBox5.Location = new System.Drawing.Point(160, 203);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(249, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtemail.Location = new System.Drawing.Point(160, 317);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(249, 20);
+            this.txtemail.TabIndex = 15;
             // 
-            // textBox4
+            // txtphone
             // 
-            this.textBox4.Location = new System.Drawing.Point(160, 165);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(249, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtphone.Location = new System.Drawing.Point(160, 242);
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(249, 20);
+            this.txtphone.TabIndex = 13;
             // 
-            // textBox3
+            // txtstate
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(249, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtstate.Location = new System.Drawing.Point(160, 203);
+            this.txtstate.Name = "txtstate";
+            this.txtstate.Size = new System.Drawing.Size(249, 20);
+            this.txtstate.TabIndex = 12;
             // 
-            // textBox2
+            // txtcity
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(249, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtcity.Location = new System.Drawing.Point(160, 165);
+            this.txtcity.Name = "txtcity";
+            this.txtcity.Size = new System.Drawing.Size(249, 20);
+            this.txtcity.TabIndex = 11;
             // 
-            // textBox1
+            // txtstreet
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtstreet.Location = new System.Drawing.Point(160, 127);
+            this.txtstreet.Name = "txtstreet";
+            this.txtstreet.Size = new System.Drawing.Size(249, 20);
+            this.txtstreet.TabIndex = 10;
+            // 
+            // txtfname
+            // 
+            this.txtfname.Location = new System.Drawing.Point(160, 86);
+            this.txtfname.Name = "txtfname";
+            this.txtfname.Size = new System.Drawing.Size(249, 20);
+            this.txtfname.TabIndex = 9;
+            // 
+            // txtlname
+            // 
+            this.txtlname.Location = new System.Drawing.Point(160, 46);
+            this.txtlname.Name = "txtlname";
+            this.txtlname.Size = new System.Drawing.Size(249, 20);
+            this.txtlname.TabIndex = 8;
             // 
             // label8
             // 
@@ -244,10 +265,10 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox7);
+            this.tabPage2.Controls.Add(this.txtacctype);
+            this.tabPage2.Controls.Add(this.txtbal);
+            this.tabPage2.Controls.Add(this.txtdes);
+            this.tabPage2.Controls.Add(this.txtacc);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label10);
@@ -260,38 +281,38 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // txtacctype
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txtacctype.FormattingEnabled = true;
+            this.txtacctype.Items.AddRange(new object[] {
             "Saving",
             "Fix"});
-            this.comboBox1.Location = new System.Drawing.Point(164, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 21);
-            this.comboBox1.TabIndex = 8;
+            this.txtacctype.Location = new System.Drawing.Point(164, 106);
+            this.txtacctype.Name = "txtacctype";
+            this.txtacctype.Size = new System.Drawing.Size(244, 21);
+            this.txtacctype.TabIndex = 8;
             // 
-            // textBox11
+            // txtbal
             // 
-            this.textBox11.Location = new System.Drawing.Point(164, 256);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(244, 20);
-            this.textBox11.TabIndex = 7;
+            this.txtbal.Location = new System.Drawing.Point(164, 256);
+            this.txtbal.Name = "txtbal";
+            this.txtbal.Size = new System.Drawing.Size(244, 20);
+            this.txtbal.TabIndex = 7;
             // 
-            // textBox10
+            // txtdes
             // 
-            this.textBox10.Location = new System.Drawing.Point(164, 168);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(245, 72);
-            this.textBox10.TabIndex = 6;
+            this.txtdes.Location = new System.Drawing.Point(164, 168);
+            this.txtdes.Multiline = true;
+            this.txtdes.Name = "txtdes";
+            this.txtdes.Size = new System.Drawing.Size(245, 72);
+            this.txtdes.TabIndex = 6;
             // 
-            // textBox7
+            // txtacc
             // 
-            this.textBox7.Location = new System.Drawing.Point(164, 52);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(244, 20);
-            this.textBox7.TabIndex = 4;
+            this.txtacc.Location = new System.Drawing.Point(164, 52);
+            this.txtacc.Name = "txtacc";
+            this.txtacc.Size = new System.Drawing.Size(244, 20);
+            this.txtacc.TabIndex = 4;
             // 
             // label12
             // 
@@ -341,6 +362,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -350,27 +372,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(174, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 24);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "cust #";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(78, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 16);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "Customer ID:";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
@@ -382,6 +384,20 @@
             this.panel1.Size = new System.Drawing.Size(477, 31);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Yellow;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(108, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(111, 31);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Accounts";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -396,19 +412,6 @@
             this.button2.Text = "Customers";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(108, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 31);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Accounts";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // AccountCreation
             // 
@@ -447,20 +450,20 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtphone;
+        private System.Windows.Forms.TextBox txtstate;
+        private System.Windows.Forms.TextBox txtcity;
+        private System.Windows.Forms.TextBox txtstreet;
+        private System.Windows.Forms.TextBox txtfname;
+        private System.Windows.Forms.TextBox txtlname;
+        private System.Windows.Forms.DateTimePicker txtdate;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox txtacctype;
+        private System.Windows.Forms.TextBox txtbal;
+        private System.Windows.Forms.TextBox txtdes;
+        private System.Windows.Forms.TextBox txtacc;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

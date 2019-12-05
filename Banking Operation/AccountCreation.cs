@@ -64,8 +64,73 @@ namespace Banking_Operation
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage1;
-            button1.BackColor = ColorTranslator.FromHtml();
-            button3.BackColor = ColorTranslator.FromHtml();
+            button2.BackColor = ColorTranslator.FromHtml("Green");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+            button4.BackColor = ColorTranslator.FromHtml("192, 192, 0");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string cid, lname, fname, street, city, state, phone, date, email, accno, acctype, des, bal;
+
+            cid = label14.Text;
+            lname = txtlname.Text;
+            fname = txtfname.Text;
+            street = txtstreet.Text;
+            city = txtcity.Text;
+            state = txtstate.Text;
+            phone = txtphone.Text;
+            date = txtdate.Text;
+            email = txtemail.Text;
+            accno = txtacc.Text;
+            acctype = txtacctype.Text;
+            des = txtdes.Text;
+            bal = txtbal.Text;
+
+
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            MySqlTransaction transaction;
+
+            transaction = con.BeginTransaction();
+
+            cmd.Connection = con;
+            cmd.Transaction = transaction;
+
+
+            try
+            {
+                cmd.CommandText =
+                    "insert into customer(custid,lastname,firstname,street,city,state,phone,date,email) " +
+                    "values('"+cid+ "','" + lname + "','" + fname + "','" + street + "','" + city + "','" + state + "','" + phone + "','" + date + "','" + email + "')";
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "insert into account(accid,custid,acctype,description,balance) values('"+ accno + "','" + cid + "','" + acctype + "','" + des + "','" + bal + "')";
+                cmd.ExecuteNonQuery();
+
+                transaction.Commit();
+
+                MessageBox.Show("Record added ...");
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                MessageBox.Show(ex.ToString());
+            }
+
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }
